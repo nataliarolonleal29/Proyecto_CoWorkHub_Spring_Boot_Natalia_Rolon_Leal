@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoWorkHub | Reservas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/api.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/reservas.js" defer></script>
+</head>
+<body class="app-page">
+    
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">C</div>
+            <h2>CoWorkHub</h2>
+        </div>
+
+        <nav>
+            <a href="dashboard.html" class="nav-link">Panel principal</a>
+            <a href="reservas.html" class="nav-link active">Reservas</a>
+            <a href="catalogos.html" class="nav-link">Catálogos</a>
+        </nav>
+
+        <button id="logoutButton" class="btn-logout">Cerrar sesión</button>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h1>Gestión de reservas</h1>
+                <p>Consulta y registra tus reservas.</p>
+            </div>
+            <span id="welcomeUser" class="user-label">Usuario</span>
+        </header>
+
+        <section class="content-section">
+            <div class="section-heading">
+                <h2>Crear una reserva</h2>
+                <p>Completa los datos del espacio que deseas reservar.</p>
+            </div>
+
+            <form id="bookingForm" class="form-card">
+
+                <div class="form-grid">
+                    <div>
+                        <label for="roomId">ID de la sala</label>
+                        <input type="number" id="roomId" min="1" required>
+                    </div>
+
+                    <div>
+                        <label for="attendees">Número de asistentes</label>
+                        <input type="number" id="attendees" min="1" required>
+                    </div>
+
+                    <div>
+                        <label for="startTime">Fecha y hora de inicio</label>
+                        <input type="datetime-local" id="startTime" required>
+                    </div>
+
+                    <div>
+                        <label for="endTime">Fecha y hora de finalización</label>
+                        <input type="datetime-local" id="endTime" required>
+                    </div>
+
+                    <div>
+                        <label for="memberId">ID del miembro (solo personal)</label>
+                        <input type="number" id="memberId" min="1">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    Crear reserva
+                </button>
+
+                <p id="bookingMessage" class="message"></p>
+            </form>
+        </section>
+
+        <section class="content-section">
+            <h2>Reservas registradas</h2>
+
+            <button id="loadBookingsButton" class="btn-secondary">
+                Actualizar reservas
+            </button>
+
+            <div id="bookingsList" class="data-list">
+                <p>Cargando reservas...</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

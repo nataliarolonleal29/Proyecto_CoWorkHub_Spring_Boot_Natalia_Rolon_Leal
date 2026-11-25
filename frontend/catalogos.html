@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoWorkHub | Catalogos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/api.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/catalogos.js" defer></script>
+</head>
+<body class="app-page">
+    
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">C</div>
+            <h2>CoWorkHub</h2>
+        </div>
+
+        <nav>
+            <a href="dashboard.html" class="nav-link">Panel principal</a>
+            <a href="reservas.html" class="nav-link">Reservas</a>
+            <a href="catalogos.html" class="nav-link active">Catálogos</a>
+        </nav>
+
+        <button id="logoutButton" class="btn-logout">Cerrar sesión</button>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h1>Nuestros catálogos</h1>
+                <p>Explora los recursos de CoWorkHub.</p>
+            </div>
+            <span id="welcomeUser" class="user-label">Usuario</span>
+        </header>
+
+        <section class="content-section">
+            <div class="section-heading">
+                <h2>Sedes</h2>
+                <p>Conoce nuestros espacios de trabajo.</p>
+            </div>
+            <div id="locationsList" class="catalog-grid">
+                <p>Cargando sedes...</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Salas</h2>
+            <div id="roomsList" class="catalog-grid">
+                <p>Cargando salas...</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Equipos</h2>
+            <div id="equipmentList" class="catalog-grid">
+                <p>Cargando equipos...</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Planes de membresía</h2>
+            <div id="plansList" class="catalog-grid">
+                <p>Cargando planes...</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Servicios adicionales</h2>
+            <div id="servicesList" class="catalog-grid">
+                <p>Cargando servicios...</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

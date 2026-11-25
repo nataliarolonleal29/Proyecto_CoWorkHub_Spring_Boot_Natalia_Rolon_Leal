@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoWorkHub | Panel Principal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/api.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/dashboard.js" defer></script>
+</head>
+<body class="app-page">
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">C</div>
+            <h2>CoWorkHub</h2>
+        </div>
+
+        <nav>
+            <a href="dashboard.html" class="nav-link active">Panel principal</a>
+            <a href="reservas.html" class="nav-link">Reservas</a>
+            <a href="catalogos.html" class="nav-link">Catálogos</a>
+        </nav>
+
+        <button id="logoutButton" class="btn-logout">Cerrar sesión</button>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h1>Panel principal</h1>
+                <p>Bienvenido a CoWorkHub.</p>
+            </div>
+            <span id="welcomeUser" class="user-label">Usuario</span>
+        </header>
+
+        <section class="welcome-banner">
+            <div>
+                <h2>Tu espacio de trabajo comienza aquí</h2>
+                <p>Consulta nuestras sedes, salas y servicios disponibles.</p>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <span class="stat-icon">🗺️</span>
+                <h3>Sedes</h3>
+                <p id="locationsCount">Cargando...</p>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">🏙️</span>
+                <h3>Salas</h3>
+                <p id="roomsCount">Cargando...</p>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">📅</span>
+                <h3>Reservas</h3>
+                <p id="bookingsCount">Cargando...</p>
+            </article>
+        </section>
+
+        <section class="content-section">
+            <h2>Accesos rápidos</h2>
+
+            <div class="quick-grid">
+                <a href="reservas.html" class="quick-card">
+                    <span>📆</span>
+                    <h3>Gestionar reservas</h3>
+                    <p>Consulta y crea reservas de espacios.</p>
+                </a>
+
+                <a href="catalogos.html" class="quick-card">
+                    <span>💻</span>
+                    <h3>Explorar catálogos</h3>
+                    <p>Conoce nuestras sedes, salas y servicios.</p>
+                </a>
+            </div>
+        </section>
+    </main>    
+</body>
+</html>
