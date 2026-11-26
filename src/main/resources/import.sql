@@ -55,12 +55,16 @@ INSERT INTO members (id, document_number, full_name, email, status, membership_p
 -- RECEPTIONIST: $2a$10$fQBnidCmD1SdS3bP7oOD..obzw5RxwbrYVfAkdrApCojVfhjWwXSC
 -- MEMBER 1: $2a$10$u73zJyxeH8jF9Qe2yx2c1OdEj1NoT5SUKDmzUpGRA7gbYFdOOmcz6
 -- MEMBER 2: $2a$10$oKxXPdpJ.JFEcbZYowNtDOVefjUkGivUoQ6lDcgjudrppCijqOu1C
+-- Hash Laura:
+-- $2a$10$9dEc3AqZPQIMsk.747mJgeK1/g.beydXjQeLuxIwLH4UNT7g5vslS
+-- Hash Carlos:
+-- $2a$10$YUTswbKb86qiHSKl.vDCru6kBCl6x5lBBSH2q3EauEAjzrP.PfPi2
 
 -- Cuentas de usuario
 INSERT INTO user_accounts (id, username, password, role, member_id) VALUES (1, 'admin', '$2a$10$WHxEeA3K//JM4kNpifwokeh6zGWUG2aNs.ewy.Kjah.6lEUA4YpHu', 'ADMIN', NULL);
 INSERT INTO user_accounts (id, username, password, role, member_id) VALUES (2, 'recepcion', '$2a$10$fQBnidCmD1SdS3bP7oOD..obzw5RxwbrYVfAkdrApCojVfhjWwXSC', 'RECEPTIONIST', NULL);
-INSERT INTO user_accounts (id, username, password, role, member_id) VALUES (3, 'laura', '$2a$10$u73zJyxeH8jF9Qe2yx2c1OdEj1NoT5SUKDmzUpGRA7gbYFdOOmcz6', 'MEMBER', 1);
-INSERT INTO user_accounts (id, username, password, role, member_id) VALUES (4, 'carlos', '$2a$10$oKxXPdpJ.JFEcbZYowNtDOVefjUkGivUoQ6lDcgjudrppCijqOu1C', 'MEMBER', 2);
+INSERT INTO user_accounts (id, username, password, role, member_id) VALUES (3, 'laura', '$2a$10$9dEc3AqZPQIMsk.747mJgeK1/g.beydXjQeLuxIwLH4UNT7g5vslS', 'MEMBER', 1);
+INSERT INTO user_accounts (id, username, password, role, member_id) VALUES (4, 'carlos', '$2a$10$YUTswbKb86qiHSKl.vDCru6kBCl6x5lBBSH2q3EauEAjzrP.PfPi2', 'MEMBER', 2);
 
 
 -- Reservas
@@ -130,4 +134,15 @@ INSERT INTO booking_items (id, booking_id, additional_service_id, quantity, appl
 --   "tokenType": "Bearer",
 --   "username": "recepcion"
 -- }
+-- {
+--   "accessToken": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsYXVyYSIsImlhdCI6MTc5NTY1ODY3MywiZXhwIjoxNzk1NzQ1MDczfQ.m4Np5hcLn6d_SaoECv2OZmv83YP0Qdo3cD7LmWyCpK25wjmBfkcnGSmCVP6Jlhao",
+--   "tokenType": "Bearer",
+--   "username": "laura"
+-- }
+
+
+
+
+
+
 -- http://localhost:8080/doc/swagger-ui.html
